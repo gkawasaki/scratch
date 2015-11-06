@@ -16,6 +16,20 @@
     var descriptor = {
         blocks: [
             [' ', 'do_something %s', 'do_something', 'sample text'],
+			[" ", "停止する", "stop"],
+			[" ", "%m.way に歩く", "move", "前"],
+			[" ", "%m.direction に曲がる", "turn", "左"],
+			[" ", "%m.side 手を振る", "wave", "左"],
+			[" ", "両手を握る", "grab"],
+			[" ", "右手を伸ばす", "stretch"],
+			[" ", "ポーズ %n の %m.servo のサーボを %n 度にする", "setServoAtPose", 0, "頭", 90],
+			[" ", "ポーズ %n の %m.led 色LEDの明るさを %n にする", "setLedAtPose", 0, "赤", 50],
+			[" ", "ポーズ %n をリセットする", "resetPose", 0, "赤", 50],
+			[" ", "%n 秒かけてポーズ %n にする", "sendPose", 1.0, 0],
+			["r", "ポーズ %n の時の %m.servo のサーボの角度", "getServoAtPose", 0, "頭"],
+			["r", "ポーズ %n 時の %m.led 色LEDの明るさ", "getLedAtPose", 0, "赤"],
+			["R", "%m.color 色のボールがある", "ball_c", "赤"],
+			[" ", "ボールを見つける", "ball"],
         ]
     };
 
