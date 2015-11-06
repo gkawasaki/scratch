@@ -1,21 +1,21 @@
 ﻿(function(ext) {
-    // shutdown時に呼ばれる
-    ext._shutdown = function() {};
+	// shutdown時に呼ばれる
+	ext._shutdown = function() {};
 
-    // statusを返してやる。デバイスとつながってない時とかここで色々返せる。
-    ext._getStatus = function() {
-        return {status: 2, msg: 'Ready'};
-    };
+	// statusを返してやる。デバイスとつながってない時とかここで色々返せる。
+	ext._getStatus = function() {
+		return {status: 2, msg: 'Ready'};
+	};
 
-    // blockが呼び出された時に呼ばれる関数を登録する。
-    // 下にあるdescriptorでブロックと関数のひも付けを行っている。
-    ext.do_domething = function(str) {
-    };
+	// blockが呼び出された時に呼ばれる関数を登録する。
+	// 下にあるdescriptorでブロックと関数のひも付けを行っている。
+	ext.do_domething = function(str) {
+	};
 
-    // ブロックと関数のひも付け
-    var descriptor = {
-        blocks: [
-            [' ', 'do_something %s', 'do_something', 'sample text'],
+	// ブロックと関数のひも付け
+	var descriptor = {
+		blocks: [
+			[' ', 'do_something %s', 'do_something', 'sample text'],
 			[' ', '停止する', 'stop'],
 			[' ', '%m.way に歩く', 'move', '前'],
 			[' ', '%m.direction に曲がる', 'turn', '左'],
@@ -30,7 +30,7 @@
 			['r', 'ポーズ %n 時の %m.led 色LEDの明るさ', 'getLedAtPose', 0, '赤'],
 			['R', '%m.color 色のボールがある', 'ball_c', '赤'],
 			[' ', 'ボールを見つける', 'ball'],
-        ],
+		],
 		menus: {
 		  way: ['前', '後ろ'],
 		  direction: ['左', '右'],
@@ -40,8 +40,8 @@
 		  sensor: ['A6', 'A7'],
 		  color: ['赤', '緑', '青'],
 		},
-    };
+	};
 
-    // 最後にExtensionを登録する
-    ScratchExtensions.register('Simple extension', descriptor, ext);
+	// 最後にExtensionを登録する
+	ScratchExtensions.register('Simple extension', descriptor, ext);
 })({});
