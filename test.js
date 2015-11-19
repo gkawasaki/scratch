@@ -1,4 +1,6 @@
 ﻿(function(ext) {
+	ext._ip = "0.0.0.0";
+
 	// shutdown時に呼ばれる
 	ext._shutdown = function() {};
 
@@ -11,11 +13,23 @@
 	// 下にあるdescriptorでブロックと関数のひも付けを行っている。
 	ext.do_domething = function(str) {
 	};
-
+	
+	//停止ブロック
+	ext.stop = function() {
+	
+	};
+	
+	//ip
+	ext.ip = function(num1,num2,num3,num4) {
+		ext._ip = num1 + "." + num2 + "." + num3 + "." + num4;
+		alert(ext._ip);
+	};
+	
 	// ブロックと関数のひも付け
 	var descriptor = {
 		blocks: [
 			[' ', 'do_something %s', 'do_something', 'sample text'],
+			[' ', 'IPアドレスの設定 %n.%n.%n.%n', 'ip','0','0','0','0'],
 			[' ', '停止する', 'stop'],
 			[' ', '%m.way に歩く', 'move', '前'],
 			[' ', '%m.direction に曲がる', 'turn', '左'],
