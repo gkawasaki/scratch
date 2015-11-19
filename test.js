@@ -21,7 +21,7 @@
 			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
 			async: false,
 			data: {
-				msg : M0
+				msg : "M0"
 			},
 			dataType: "text"
 			
