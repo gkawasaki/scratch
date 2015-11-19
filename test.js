@@ -16,6 +16,28 @@
 	
 	//停止ブロック
 	ext.stop = function() {
+		$.ajax({
+			type: "GET",
+			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
+			async: false,
+			data: {
+				msg : M0
+			},
+			dataType: "text"
+			
+			/*
+			headers: {
+			  "Authorization": "Bearer " + token
+			},
+			context: {
+			  callback: callback
+			}
+			*/
+		  }).done(function(msg) {
+			alert(msg);
+			//this.callback();
+		});
+	
 	
 	};
 	
