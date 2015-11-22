@@ -21,8 +21,8 @@
 			  callback: callback
 			}
 			*/
-		  }).done(function(msg) {
-			alert(msg);
+		  }).done(function(msg_r) {
+			alert(msg_r);
 			//this.callback();
 		});
 		
@@ -63,8 +63,8 @@
 			  callback: callback
 			}
 			*/
-		  }).done(function(msg) {
-			alert(msg);
+		  }).done(function(msg_r) {
+			alert(msg_r);
 			//this.callback();
 		});
 		
