@@ -44,8 +44,9 @@
 	
 	//停止ブロック
 	ext.stop = function() {
-		//send_msg("#M0");
+		send_msg("M0");
 		
+		/*
 		$.ajax({
 			type: "GET",
 			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
@@ -55,29 +56,29 @@
 			},
 			dataType: "text"
 			
-			/*
+			
 			headers: {
 			  "Authorization": "Bearer " + token
 			},
 			context: {
 			  callback: callback
 			}
-			*/
+			
 		  }).done(function(msg_r) {
 			alert(msg_r);
 			//this.callback();
 		});
-		
+		*/
 	
 	};
 	
 	//moveブロック
 	ext.move = function(token) {
 		if (token == "前"){
-			send_msg("#M1");
+			send_msg("M1");
 		}
 		else{
-			send_msg("#M2");
+			send_msg("M2");
 		}
 	};
 	
