@@ -44,8 +44,8 @@
 	
 	//停止ブロック
 	ext.stop = function() {
-		send_msg("#M0");
-		/*
+		//send_msg("#M0");
+		
 		$.ajax({
 			type: "GET",
 			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
@@ -55,19 +55,19 @@
 			},
 			dataType: "text"
 			
-			
+			/*
 			headers: {
 			  "Authorization": "Bearer " + token
 			},
 			context: {
 			  callback: callback
 			}
-			
+			*/
 		  }).done(function(msg) {
 			alert(msg);
 			//this.callback();
 		});
-		*/
+		
 	
 	};
 	
