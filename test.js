@@ -1,27 +1,15 @@
 ﻿(function(ext) {
 	ext._ip = "0.0.0.0";
 
-	// shutdown時に呼ばれる
-	ext._shutdown = function() {};
-
-	// statusを返してやる。デバイスとつながってない時とかここで色々返せる。
-	ext._getStatus = function() {
-		return {status: 2, msg: 'Ready'};
-	};
-
-	// blockが呼び出された時に呼ばれる関数を登録する。
-	// 下にあるdescriptorでブロックと関数のひも付けを行っている。
-	ext.do_domething = function(str) {
-	};
+	//ajaxによる通信
+	function send_msg(command){
 	
-	//停止ブロック
-	ext.stop = function() {
 		$.ajax({
 			type: "GET",
 			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
 			async: false,
 			data: {
-				msg : "M0"
+				msg : command
 			},
 			dataType: "text"
 			
@@ -37,21 +25,107 @@
 			alert(msg);
 			//this.callback();
 		});
+		
+	}	
 	
+	
+	// shutdown時に呼ばれる
+	ext._shutdown = function() {};
+
+	// statusを返してやる。デバイスとつながってない時とかここで色々返せる。
+	ext._getStatus = function() {
+		return {status: 2, msg: 'Ready'};
+	};
+
+	// blockが呼び出された時に呼ばれる関数を登録する。
+	// 下にあるdescriptorでブロックと関数のひも付けを行っている。
+	ext.do_domething = function(str) {
+	};
+	
+	//停止ブロック
+	ext.stop = function() {
+		send_msg("#M0");
+		/*
+		$.ajax({
+			type: "GET",
+			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
+			async: false,
+			data: {
+				msg : "#M0"
+			},
+			dataType: "text"
+			
+			
+			headers: {
+			  "Authorization": "Bearer " + token
+			},
+			context: {
+			  callback: callback
+			}
+			
+		  }).done(function(msg) {
+			alert(msg);
+			//this.callback();
+		});
+		*/
 	
 	};
 	
-	//ip
+	//moveブロック
+	ext.move = function(token) {
+		if (token == "前"){
+			send_msg("#M1");
+		}
+		else{
+			send_msg("#M2");
+		}
+	};
+	
+	//turnブロック
+	ext.turn = function(token) {
+		if (token == "右"){
+			send_msg("#M3");
+		}
+		else{
+			send_msg("#M4");
+		}
+	};
+	
+	//waveブロック
+	ext.wave = function(token) {
+		if (token == "右"){
+			send_msg("#M6");
+		}
+		else if (token == "左"){
+			send_msg("#M8");
+		}
+		else{
+			send_msg("#M5");
+		}
+	};
+	
+	//grabブロック
+	ext.grab = function() {
+		send_msg("#M7");
+	}
+	
+	//stretchブロック
+	ext.stretch = function() {
+		send_msg("#M9");
+	}
+	
+	//ip設定
 	ext.ip = function(num1,num2,num3,num4) {
 		ext._ip = num1 + "." + num2 + "." + num3 + "." + num4;
 		alert(ext._ip);
 	};
 	
+	
 	// ブロックと関数のひも付け
 	var descriptor = {
 		blocks: [
 			[' ', 'do_something %s', 'do_something', 'sample text'],
-			[' ', 'IPアドレスの設定 %n.%n.%n.%n', 'ip','0','0','0','0'],
+			[' ', 'IPアドレスの設定 %n . %n . %n . %n', 'ip','0','0','0','0'],
 			[' ', '停止する', 'stop'],
 			[' ', '%m.way に歩く', 'move', '前'],
 			[' ', '%m.direction に曲がる', 'turn', '左'],
