@@ -26,7 +26,7 @@
 			//this.callback();
 		});
 		
-	}	
+	};
 	
 	
 	// shutdown時に呼ばれる
