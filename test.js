@@ -44,7 +44,7 @@
 	
 	//停止ブロック
 	ext.stop = function() {
-		send_msg("M0");
+		send_msg("#M0");
 		
 		/*
 		$.ajax({
@@ -75,10 +75,10 @@
 	//moveブロック
 	ext.move = function(token) {
 		if (token == "前"){
-			send_msg("M1");
+			send_msg("#M1");
 		}
 		else{
-			send_msg("M2");
+			send_msg("#M2");
 		}
 	};
 	
