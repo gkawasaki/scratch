@@ -100,7 +100,7 @@
 			data: {
 				msg : "ball"
 			},
-			dataType: "text"
+			dataType: "text",
 			context: {
 			  callback: callback
 			}
@@ -136,7 +136,7 @@
 			['r', 'ポーズ %n の時の %m.servo のサーボの角度', 'getServoAtPose', 0, '頭'],
 			['r', 'ポーズ %n 時の %m.led 色LEDの明るさ', 'getLedAtPose', 0, '赤'],
 			['R', '%m.color 色のボールがある', 'ball_c', '赤'],
-			['', 'ボールがある', 'ball']
+			['R', 'ボールがある', 'ball'],
 		],
 		menus: {
 		  way: ['前', '後ろ'],
