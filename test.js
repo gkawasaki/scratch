@@ -94,13 +94,13 @@
 	//eyeブロック
 	ext.eye = function(token) {
 		if (token == "赤"){
-			send_msg("#PR255T005");
+			send_msg("#PR255G000B000T005");
 		}
 		else if (token == "緑"){
-			send_msg("#PG255T005");
+			send_msg("#PR000G255B000T005");
 		}
 		else{
-			send_msg("#PB255T005");
+			send_msg("#PR000G000B255T005");
 		}
 	};
 	
