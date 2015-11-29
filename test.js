@@ -84,12 +84,12 @@
 	//grabブロック
 	ext.grab = function() {
 		send_msg("#M7");
-	}
+	};
 	
 	//stretchブロック
 	ext.stretch = function() {
 		send_msg("#M9");
-	}
+	};
 	
 	//ballブロック
 	ext.ball = function(callback) {
@@ -109,7 +109,7 @@
 			alert(msg_r);
 			this.callback();
 		});
-	}
+	};
 	
 	//ip設定
 	ext.ip = function(num1,num2,num3,num4) {
