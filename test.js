@@ -46,30 +46,6 @@
 	ext.stop = function() {
 		send_msg("#M0");
 		
-		/*
-		$.ajax({
-			type: "GET",
-			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
-			async: false,
-			data: {
-				msg : "#M0"
-			},
-			dataType: "text"
-			
-			
-			headers: {
-			  "Authorization": "Bearer " + token
-			},
-			context: {
-			  callback: callback
-			}
-			
-		  }).done(function(msg_r) {
-			alert(msg_r);
-			//this.callback();
-		});
-		*/
-	
 	};
 	
 	//moveブロック
@@ -115,6 +91,26 @@
 		send_msg("#M9");
 	}
 	
+	//ballブロック
+	ext.ball = function(callback) {
+		$.ajax({
+			type: "GET",
+			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
+			async: false,
+			data: {
+				msg : "ball"
+			},
+			dataType: "text"
+			context: {
+			  callback: callback
+			}
+			
+		  }).done(function(msg_r) {
+			alert(msg_r);
+			this.callback();
+		});
+	}
+	
 	//ip設定
 	ext.ip = function(num1,num2,num3,num4) {
 		ext._ip = num1 + "." + num2 + "." + num3 + "." + num4;
@@ -140,7 +136,7 @@
 			['r', 'ポーズ %n の時の %m.servo のサーボの角度', 'getServoAtPose', 0, '頭'],
 			['r', 'ポーズ %n 時の %m.led 色LEDの明るさ', 'getLedAtPose', 0, '赤'],
 			['R', '%m.color 色のボールがある', 'ball_c', '赤'],
-			[' ', 'ボールを見つける', 'ball'],
+			['R', 'ボールがある', 'ball'],
 		],
 		menus: {
 		  way: ['前', '後ろ'],
