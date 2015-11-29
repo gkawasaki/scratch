@@ -92,7 +92,7 @@
 	};
 	
 	//eyeブロック
-	ext.stretch = function(token) {
+	ext.eye = function(token) {
 		if (token == "赤"){
 			send_msg("#PR255G000B000T005");
 		}
