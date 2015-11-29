@@ -91,6 +91,19 @@
 		send_msg("#M9");
 	};
 	
+	//eyeブロック
+	ext.stretch = function(token) {
+		if (token == "赤"){
+			send_msg("#PR255G000B000T005");
+		}
+		else if (token == "緑"){
+			send_msg("#PR000G255B000T005");
+		}
+		else{
+			send_msg("#PR000G000B255T005");
+		}
+	};
+	
 	//ballブロック
 	ext.ball = function(callback) {
 		$.ajax({
@@ -129,6 +142,7 @@
 			[' ', '%m.side 手を振る', 'wave', '左'],
 			[' ', '両手を握る', 'grab'],
 			[' ', '右手を伸ばす', 'stretch'],
+			[' ', '目の色を%m.led 色に変える', 'eye','赤'],
 			[' ', 'ポーズ %n の %m.servo のサーボを %n 度にする', 'setServoAtPose', 0, '頭', 90],
 			[' ', 'ポーズ %n の %m.led 色LEDの明るさを %n にする', 'setLedAtPose', 0, '赤', 50],
 			[' ', 'ポーズ %n をリセットする', 'resetPose', 0, '赤', 50],
