@@ -151,7 +151,7 @@
 			['r', 'ポーズ %n 時の %m.led 色LEDの明るさ', 'getLedAtPose', 0, '赤'],
 			['R', 'ボールの色', 'ball_c'],
 			['R', 'ボールの数', 'ball'],
-			['r', 'ある', 'exist'],
+			['r', 'ある', 'exista'],
 			['r', 'ない', 'not_exist'],
 		],
 		menus: {
