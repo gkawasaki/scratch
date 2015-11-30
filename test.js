@@ -150,7 +150,7 @@
 			['r', 'ポーズ %n の時の %m.servo のサーボの角度', 'getServoAtPose', 0, '頭'],
 			['r', 'ポーズ %n 時の %m.led 色LEDの明るさ', 'getLedAtPose', 0, '赤'],
 			['R', 'ボールの色', 'ball_c'],
-			['R', 'ボールの有無', 'ball'],
+			['R', 'ボールの数', 'ball'],
 			['r', 'ある', 'exist'],
 			['r', 'ない', 'not_exist'],
 		],
