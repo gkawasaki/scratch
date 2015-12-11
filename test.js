@@ -28,6 +28,16 @@
 		
 	};
 	
+	//スリープ関数
+	function sleep(time) {
+		var d1 = new Date().getTime();
+		var d2 = new Date().getTime();
+		while (d2 < d1 + 1000 * time) {
+			d2 = new Date().getTime();
+		}
+		return;
+	};
+	
 	
 	// shutdown時に呼ばれる
 	ext._shutdown = function() {};
@@ -37,9 +47,11 @@
 		return {status: 2, msg: 'Ready'};
 	};
 
-	// blockが呼び出された時に呼ばれる関数を登録する。
-	// 下にあるdescriptorでブロックと関数のひも付けを行っている。
-	ext.do_domething = function(str) {
+	//テストブロック
+	ext.test = function(time) {
+		alert('aaaa');
+		sleep(time);
+		alert('zzzz');
 	};
 	
 	//停止ブロック
@@ -49,7 +61,7 @@
 	};
 	
 	//moveブロック
-	ext.move = function(token) {
+	ext.move = function(time,token) {
 		if (token == "前"){
 			send_msg("#M1");
 		}
@@ -134,10 +146,10 @@
 	// ブロックと関数のひも付け
 	var descriptor = {
 		blocks: [
-			[' ', 'do_something %s', 'do_something', 'sample text'],
+			[' ', '%n 秒', 'test', '1'],
 			[' ', 'IPアドレスの設定 %n . %n . %n . %n', 'ip','0','0','0','0'],
 			[' ', '停止する', 'stop'],
-			[' ', '%m.way に歩く', 'move', '前'],
+			[' ', '%n 秒間 %m.way に歩く', 'move', '1', '前'],
 			[' ', '%m.direction に曲がる', 'turn', '左'],
 			[' ', '%m.side 手を振る', 'wave', '左'],
 			[' ', '両手を握る', 'grab'],
