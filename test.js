@@ -49,7 +49,7 @@
 
 	//テストブロック
 	ext.test = function(time) {
-		arert("open");
+		alert("open");
 		window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
 	};
 	
@@ -146,7 +146,7 @@
 	// ブロックと関数のひも付け
 	var descriptor = {
 		blocks: [
-			[' ', 'test block', 'test'],
+			[' ', 'test_block', 'test'],
 			[' ', 'IPアドレスの設定 %n . %n . %n . %n', 'ip','0','0','0','0'],
 			[' ', '停止する', 'stop'],
 			[' ', '%n 秒間 %m.way に歩く', 'move', '1', '前'],
