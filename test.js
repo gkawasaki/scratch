@@ -49,19 +49,7 @@
 
 	//テストブロック
 	ext.test = function(time) {
-		$.ajax({
-			type: "GET",
-			url: "http://" + ext._ip + "/cgi-bin/img.cgi",
-			async: false,
-			dataType: "text",
-			context: {
-			  callback: callback
-			}
-			
-		  }).done(function(msg_r) {
-			alert(msg_r);
-			this.callback();
-		});
+		window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" ) ;
 	};
 	
 	//停止ブロック
