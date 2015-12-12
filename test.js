@@ -49,9 +49,19 @@
 
 	//テストブロック
 	ext.test = function(time) {
-		alert('aaaa');
-		sleep(time);
-		alert('zzzz');
+		$.ajax({
+			type: "GET",
+			url: "http://" + ext._ip + "/cgi-bin/img.cgi",
+			async: false,
+			dataType: "text",
+			context: {
+			  callback: callback
+			}
+			
+		  }).done(function(msg_r) {
+			alert(msg_r);
+			this.callback();
+		});
 	};
 	
 	//停止ブロック
@@ -68,6 +78,7 @@
 		else{
 			send_msg("#M2");
 		}
+		sleep(time);
 	};
 	
 	//turnブロック
