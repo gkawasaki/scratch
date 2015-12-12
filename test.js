@@ -49,7 +49,8 @@
 
 	//テストブロック
 	ext.test = function(time) {
-		window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" ) ;
+		arert("open");
+		window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
 	};
 	
 	//停止ブロック
