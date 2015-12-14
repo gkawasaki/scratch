@@ -71,13 +71,14 @@
 	};
 	
 	//turnブロック
-	ext.turn = function(token) {
+	ext.turn = function(time,token) {
 		if (token == "右"){
 			send_msg("#M3");
 		}
 		else{
 			send_msg("#M4");
 		}
+		sleep(time);
 	};
 	
 	//waveブロック
@@ -143,6 +144,12 @@
 	};
 	
 	
+	//show_img
+	ext.show_img = function() {
+		//alert("open");
+		window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
+	};
+	
 	// ブロックと関数のひも付け
 	var descriptor = {
 		blocks: [
@@ -150,7 +157,7 @@
 			[' ', 'IPアドレスの設定 %n . %n . %n . %n', 'ip','0','0','0','0'],
 			[' ', '停止する', 'stop'],
 			[' ', '%n 秒間 %m.way に歩く', 'move', '1', '前'],
-			[' ', '%m.direction に曲がる', 'turn', '左'],
+			[' ', '%n 秒間 %m.direction に曲がる', 'turn', '1', '左'],
 			[' ', '%m.side 手を振る', 'wave', '左'],
 			[' ', '両手を握る', 'grab'],
 			[' ', '右手を伸ばす', 'stretch'],
@@ -163,7 +170,8 @@
 			['r', 'ポーズ %n 時の %m.led 色LEDの明るさ', 'getLedAtPose', 0, '赤'],
 			['R', 'ボールの色', 'ball_c'],
 			['R', 'ボールの数', 'ball'],
-			['r', 'ある', 'exista'],
+			['r', '撮影画像を表示', 'show_img'],
+			//['r', 'ある', 'exista'],
 			//['r', 'ない', 'not_exist'],
 		],
 		menus: {
