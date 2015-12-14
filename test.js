@@ -67,7 +67,7 @@
 		else{
 			send_msg("#M2");
 		}
-		sleep(time);
+		sleep(time*1.5);
 	};
 	
 	//turnブロック
@@ -156,8 +156,8 @@
 			[' ', 'test_block', 'test'],
 			[' ', 'IPアドレスの設定 %n . %n . %n . %n', 'ip','0','0','0','0'],
 			[' ', '停止する', 'stop'],
-			[' ', '%n 秒間 %m.way に歩く', 'move', '1', '前'],
-			[' ', '%n 秒間 %m.direction に曲がる', 'turn', '1', '左'],
+			[' ', '%n 歩 %m.way に歩く', 'move', '4', '前'],
+			[' ', '%n 秒間 %m.direction に曲がる', 'turn', '5', '左'],
 			[' ', '%m.side 手を振る', 'wave', '左'],
 			[' ', '両手を握る', 'grab'],
 			[' ', '右手を伸ばす', 'stretch'],
