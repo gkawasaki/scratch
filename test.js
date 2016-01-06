@@ -67,8 +67,8 @@
 		else{
 			send_msg("#M2");
 		}
-		//sleep(time*1.5);
-		sleep(time);
+		sleep(time*1.5);
+		//sleep(time);
 		send_msg("#M0");
 	};
 	
