@@ -56,7 +56,7 @@
 	//停止ブロック
 	ext.stop = function() {
 		send_msg("#M0");
-		sleep(1);
+		sleep(3);
 	};
 	
 	//moveブロック
@@ -70,7 +70,7 @@
 		sleep(time*1.5);
 		//sleep(time);
 		send_msg("#M0");
-		sleep(1);
+		sleep(3);
 	};
 	
 	//turnブロック
