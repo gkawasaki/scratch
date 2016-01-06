@@ -68,6 +68,7 @@
 			send_msg("#M2");
 		}
 		sleep(time*1.5);
+		send_msg("#M0");
 	};
 	
 	//turnブロック
@@ -79,6 +80,7 @@
 			send_msg("#M4");
 		}
 		sleep(time);
+		send_msg("#M0");
 	};
 	
 	//waveブロック
