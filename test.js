@@ -7,7 +7,7 @@
 		$.ajax({
 			type: "GET",
 			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
-			async: false,
+			//async: false,
 			data: {
 				msg : command
 			},
