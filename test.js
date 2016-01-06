@@ -67,17 +67,18 @@
 		else{
 			send_msg("#M2");
 		}
-		sleep(time*1.5);
+		//sleep(time*1.5);
+		sleep(time);
 		send_msg("#M0");
 	};
 	
 	//turnブロック
 	ext.turn = function(time,token) {
 		if (token == "右"){
-			send_msg("#M3");
+			send_msg("#M4");
 		}
 		else{
-			send_msg("#M4");
+			send_msg("#M3");
 		}
 		sleep(time);
 		send_msg("#M0");
