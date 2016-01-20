@@ -1,6 +1,6 @@
 ﻿(function(ext) {
-	var ext._ip = "0.0.0.0";
-	var ext._dist = 0;
+	ext._ip = "0.0.0.0";
+	ext._dist = 0;
 	
 	//ajaxによる通信
 	function send_msg(command){
