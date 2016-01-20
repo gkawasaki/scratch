@@ -220,6 +220,10 @@
 	
 	};
 	
+	ext.confirm = function(question) {
+        return confirm(question);
+    };
+	
 	// ブロックと関数のひも付け
 	var descriptor = {
 		blocks: [
@@ -242,7 +246,8 @@
 			['R', 'ボールの数', 'ball'],
 			['r', '撮影画像を表示', 'show_img'],
 			['R', '距離センサの値', 'dsensor'],
-			['b', '物が近くにある時', 'when_near'],
+			['h', '物が近くにある時', 'when_near'],
+			['b', 'confirm %s', 'confirm', 'Are you sure?'],
 			//['r', 'ある', 'exista'],
 			//['r', 'ない', 'not_exist'],
 		],
