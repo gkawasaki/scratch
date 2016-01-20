@@ -52,7 +52,7 @@
 			}
 			*/
 		  }).done(function(msg_r) {
-			alert(msg_r);
+			//alert(msg_r);
 			//this.callback();
 			sleep(1);
 		});
@@ -95,10 +95,10 @@
 	//moveブロック
 	ext.move = function(time,token) {
 		if (token == "前"){
-			send_msg3("#M01",time*1.5,"#M00");
+			send_msg3("#M01",time*1.5+1,"#M00");
 		}
 		else{
-			send_msg3("#M02",time*1.5,"#M00");
+			send_msg3("#M02",time*1.5+1,"#M00");
 		}
 		//sleep(time*1.5);
 		//sleep(time);
