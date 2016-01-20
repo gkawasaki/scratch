@@ -1,6 +1,6 @@
 ﻿(function(ext) {
-	ext._ip = "0.0.0.0";
-	ext._dist = 0;
+	var ext._ip = "0.0.0.0";
+	var ext._dist = 0;
 	
 	//ajaxによる通信
 	function send_msg(command){
@@ -242,7 +242,7 @@
 			['R', 'ボールの数', 'ball'],
 			['r', '撮影画像を表示', 'show_img'],
 			['R', '距離センサの値', 'dsensor'],
-			['h', '物が近くにある時', 'when_near'],
+			['b', '物が近くにある時', 'when_near'],
 			//['r', 'ある', 'exista'],
 			//['r', 'ない', 'not_exist'],
 		],
