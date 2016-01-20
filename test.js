@@ -204,8 +204,7 @@
 			
 		  }).done(function(msg_r) {
 			alert(msg_r);
-			callback = msg_r;
-			this.callback();
+			this.callback(msg_r);
 		});
 	};
 	
