@@ -31,7 +31,7 @@
 	
 	//複数メッセージ送信
 	function send_msg3(command1,time,command2){
-		alert(time);
+		//alert(time);
 		$.ajax({
 			type: "GET",
 			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
@@ -52,7 +52,7 @@
 			}
 			*/
 		  }).done(function(msg_r) {
-			//alert(msg_r);
+			alert(msg_r);
 			//this.callback();
 			sleep(1);
 		});
@@ -88,17 +88,17 @@
 	
 	//停止ブロック
 	ext.stop = function() {
-		send_msg("#M0");
+		send_msg("#M00");
 		//sleep(3);
 	};
 	
 	//moveブロック
 	ext.move = function(time,token) {
 		if (token == "前"){
-			send_msg3("#M1",time*1.5,"#M0");
+			send_msg3("#M01",time*1.5,"#M00");
 		}
 		else{
-			send_msg3("#M2",time*1.5,"#M0");
+			send_msg3("#M02",time*1.5,"#M00");
 		}
 		//sleep(time*1.5);
 		//sleep(time);
@@ -109,10 +109,10 @@
 	//turnブロック
 	ext.turn = function(time,token) {
 		if (token == "右"){
-			send_msg3("#M4",time,"#M0");
+			send_msg3("#M04",time,"#M00");
 		}
 		else{
-			send_msg3("#M3",time,"#M0");
+			send_msg3("#M03",time,"#M00");
 		}
 		//sleep(time);
 		//send_msg("#M0");
@@ -122,24 +122,24 @@
 	//waveブロック
 	ext.wave = function(token) {
 		if (token == "右"){
-			send_msg("#M6");
+			send_msg("#M06");
 		}
 		else if (token == "左"){
-			send_msg("#M8");
+			send_msg("#M08");
 		}
 		else{
-			send_msg("#M5");
+			send_msg("#M05");
 		}
 	};
 	
 	//grabブロック
 	ext.grab = function() {
-		send_msg("#M7");
+		send_msg("#M07");
 	};
 	
 	//stretchブロック
 	ext.stretch = function() {
-		send_msg("#M9");
+		send_msg("#M09");
 	};
 	
 	//eyeブロック
