@@ -1,6 +1,7 @@
 ﻿(function(ext) {
 	ext._ip = "0.0.0.0";
-
+	ext._dist = 0;
+	
 	//ajaxによる通信
 	function send_msg(command){
 	
@@ -171,7 +172,7 @@
 			
 		  }).done(function(msg_r) {
 			alert(msg_r);
-			this.callback();
+			this.callback(msg_r);
 		});
 	};
 	
@@ -203,11 +204,21 @@
 			}
 			
 		  }).done(function(msg_r) {
-			alert(msg_r);
+			//alert(msg_r);
+			ext._dist = msg_r;
 			this.callback(msg_r);
 		});
 	};
 	
+	//物が近くにある時
+	ext.when_near = function(){
+		if(ext._dist > 600){
+			return true;
+		}
+	
+		return false;
+	
+	};
 	
 	// ブロックと関数のひも付け
 	var descriptor = {
@@ -231,6 +242,7 @@
 			['R', 'ボールの数', 'ball'],
 			['r', '撮影画像を表示', 'show_img'],
 			['R', '距離センサの値', 'dsensor'],
+			['h', '物が近くにある時', 'when_near'],
 			//['r', 'ある', 'exista'],
 			//['r', 'ない', 'not_exist'],
 		],
