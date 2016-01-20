@@ -31,7 +31,7 @@
 	
 	//複数メッセージ送信
 	function send_msg3(command1,time,command2){
-	
+		alert(time);
 		$.ajax({
 			type: "GET",
 			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
