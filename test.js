@@ -188,6 +188,27 @@
 		window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
 	};
 	
+	//dsensorブロック
+	ext.dsensor = function(callback) {
+		$.ajax({
+			type: "GET",
+			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
+			async: false,
+			data: {
+				msg : "dsensor"
+			},
+			dataType: "text",
+			context: {
+			  callback: callback
+			}
+			
+		  }).done(function(msg_r) {
+			alert(msg_r);
+			this.callback();
+		});
+	};
+	
+	
 	// ブロックと関数のひも付け
 	var descriptor = {
 		blocks: [
@@ -209,6 +230,7 @@
 			['R', 'ボールの色', 'ball_c'],
 			['R', 'ボールの数', 'ball'],
 			['r', '撮影画像を表示', 'show_img'],
+			['R', '距離センサの値', 'dsensor'],
 			//['r', 'ある', 'exista'],
 			//['r', 'ない', 'not_exist'],
 		],
