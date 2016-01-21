@@ -229,14 +229,15 @@
 		  }).done(function(msg_r) {
 			alert(Number(msg_r));
 			//ext._dist = msg_r;
-			if (Number(msg_r) > 550){
+		});
+	
+		if (Number(msg_r) > 550){
 				alert(msg_r);
 				return true;
 			}
-			else {
+		else{
 				return false;
 			}
-		});
 	
 	};
 	
