@@ -227,7 +227,7 @@
 			}
 			*/
 		  }).done(function(msg_r) {
-			alert(msg_r);
+			alert(Number(msg_r));
 			//ext._dist = msg_r;
 			if (Number(msg_r) > 550){
 				alert(msg_r);
