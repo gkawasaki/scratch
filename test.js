@@ -231,7 +231,7 @@
 			ext._dist = msg_r;
 		});
 	
-		if ( ext._dist > 550){
+		if ( ext._dist > 510){
 				alert(ext._dist);
 				return true;
 			}
@@ -266,6 +266,7 @@
 			['r', '撮影画像を表示', 'show_img'],
 			['R', '距離センサの値', 'dsensor'],
 			['b', '物が近くにある', 'near'],
+			['b', '物が近くにくる', 'near'],
 			//['r', 'ある', 'exista'],
 			//['r', 'ない', 'not_exist'],
 		],
