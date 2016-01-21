@@ -210,13 +210,31 @@
 		});
 	};
 	
-	//物が近くにある時
-	ext.when_near = function(){
-		if(ext._dist > 600){
-			return true;
-		}
+	//物が近くにある
+	ext.near = function(){
+		$.ajax({
+			type: "GET",
+			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
+			async: false,
+			data: {
+				msg : "dsensor"
+			},
+			dataType: "text"
+			
+			/*
+			context: {
+			  callback: callback
+			}
+			*/
+		  }).done(function(msg_r) {
+			alert(msg_r);
+			if(msg_r > 550){
+				return true;
+			}
 	
-		return false;
+			return false;
+			
+		});
 	
 	};
 	
@@ -244,7 +262,7 @@
 			['R', 'ボールの数', 'ball'],
 			['r', '撮影画像を表示', 'show_img'],
 			['R', '距離センサの値', 'dsensor'],
-			['b', '物が近くにある時', 'when_near'],
+			['b', '物が近くにある', 'near'],
 			//['r', 'ある', 'exista'],
 			//['r', 'ない', 'not_exist'],
 		],
