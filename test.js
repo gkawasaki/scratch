@@ -228,7 +228,8 @@
 			*/
 		  }).done(function(msg_r) {
 			alert(msg_r);
-			if(msg_r > 550){
+			ext._dist = msg_r;
+			if(ext._dist > 550){
 				return true;
 			}
 			else{
