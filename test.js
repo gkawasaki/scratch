@@ -120,6 +120,20 @@
 		//sleep(1);
 	};
 	
+	//turn_degブロック
+	ext.turn = function(degree,token) {
+		if (token == "右"){
+			send_msg3("#M04",degree,"#M00");
+		}
+		else{
+			send_msg3("#M03",degree,"#M00");
+		}
+		//sleep(time);
+		//send_msg("#M0");
+		//sleep(1);
+	};
+	
+	
 	//waveブロック
 	ext.wave = function(token) {
 		if (token == "右"){
@@ -251,6 +265,7 @@
 			[' ', '停止する', 'stop'],
 			[' ', '%n 歩 %m.way に歩く', 'move', '4', '前'],
 			[' ', '%n 秒間 %m.direction に曲がる', 'turn', '5', '左'],
+			[' ', '%n 度 %m.direction に曲がる', 'turn_deg', '5', '左'],
 			[' ', '%m.side 手を振る', 'wave', '左'],
 			[' ', '両手を握る', 'grab'],
 			[' ', '右手を伸ばす', 'stretch'],
