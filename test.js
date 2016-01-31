@@ -30,8 +30,8 @@
 		
 	};
 	
-	//複数メッセージ送信
-	function send_msg3(command1,time,command2,tdmsg){
+	//複数メッセージ送信(time)
+	function send_msg3_t(command1,time,command2){
 		//alert(time);
 		$.ajax({
 			type: "GET",
@@ -39,7 +39,37 @@
 			async: false,
 			data: {
 				msg1 : command1,
-				tdmsg : time,
+				tmsg : time,
+				msg2 : command2
+			},
+			dataType: "text"
+			
+			/*
+			headers: {
+			  "Authorization": "Bearer " + token
+			},
+			context: {
+			  callback: callback
+			}
+			*/
+		  }).done(function(msg_r) {
+			alert(msg_r);
+			//this.callback();
+			sleep(1);
+		});
+		
+	};
+	
+	//複数メッセージ送信(degree)
+	function send_msg3_d(command1,degree,command2){
+		
+		$.ajax({
+			type: "GET",
+			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
+			async: false,
+			data: {
+				msg1 : command1,
+				dmsg : degree,
 				msg2 : command2
 			},
 			dataType: "text"
@@ -96,10 +126,10 @@
 	//moveブロック
 	ext.move = function(time,token) {
 		if (token == "前"){
-			send_msg3("#M01",time*1.5+1,"#M00","tmsg");
+			send_msg3_t("#M01",time*1.5+1,"#M00");
 		}
 		else{
-			send_msg3("#M02",time*1.5+1,"#M00","tmsg");
+			send_msg3_t("#M02",time*1.5+1,"#M00");
 		}
 		//sleep(time*1.5);
 		//sleep(time);
@@ -110,10 +140,10 @@
 	//turnブロック
 	ext.turn = function(time,token) {
 		if (token == "右"){
-			send_msg3("#M04",time,"#M00","tmsg");
+			send_msg3_t("#M04",time,"#M00");
 		}
 		else{
-			send_msg3("#M03",time,"#M00","tmsg");
+			send_msg3_t("#M03",time,"#M00");
 		}
 		//sleep(time);
 		//send_msg("#M0");
@@ -123,10 +153,10 @@
 	//turn_degブロック
 	ext.turn_deg = function(degree,token) {
 		if (token == "右"){
-			send_msg3("#M04",degree,"#M00","dmsg");
+			send_msg3_d("#M04",degree,"#M00");
 		}
 		else{
-			send_msg3("#M03",degree,"#M00","dmsg");
+			send_msg3_d("#M03",degree,"#M00");
 		}
 		//sleep(time);
 		//send_msg("#M0");
