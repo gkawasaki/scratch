@@ -23,7 +23,7 @@
 			}
 			*/
 		  }).done(function(msg_r) {
-			alert(msg_r);
+			//alert(msg_r);
 			//this.callback();
 			sleep(1);
 		});
@@ -121,7 +121,7 @@
 	};
 	
 	//turn_degブロック
-	ext.turn = function(degree,token) {
+	ext.turn_deg = function(degree,token) {
 		if (token == "右"){
 			send_msg3("#M04",degree,"#M00","dmsg");
 		}
