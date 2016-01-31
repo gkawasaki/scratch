@@ -23,7 +23,7 @@
 			}
 			*/
 		  }).done(function(msg_r) {
-			//alert(msg_r);
+			alert(msg_r);
 			//this.callback();
 			sleep(1);
 		});
