@@ -1,5 +1,5 @@
 ﻿(function(ext) {
-	ext._ip = "0.0.0.0";
+	ext._ip = "10.30.82.15";
 	ext._dist = 0;
 	
 	//ajaxによる通信
@@ -31,7 +31,7 @@
 	};
 	
 	//複数メッセージ送信
-	function send_msg3(command1,time,command2){
+	function send_msg3(command1,time,command2,tdmsg){
 		//alert(time);
 		$.ajax({
 			type: "GET",
@@ -39,7 +39,7 @@
 			async: false,
 			data: {
 				msg1 : command1,
-				tmsg : time,
+				tdmsg : time,
 				msg2 : command2
 			},
 			dataType: "text"
@@ -96,10 +96,10 @@
 	//moveブロック
 	ext.move = function(time,token) {
 		if (token == "前"){
-			send_msg3("#M01",time*1.5+1,"#M00");
+			send_msg3("#M01",time*1.5+1,"#M00","tmsg");
 		}
 		else{
-			send_msg3("#M02",time*1.5+1,"#M00");
+			send_msg3("#M02",time*1.5+1,"#M00","tmsg");
 		}
 		//sleep(time*1.5);
 		//sleep(time);
@@ -110,10 +110,10 @@
 	//turnブロック
 	ext.turn = function(time,token) {
 		if (token == "右"){
-			send_msg3("#M04",time,"#M00");
+			send_msg3("#M04",time,"#M00","tmsg");
 		}
 		else{
-			send_msg3("#M03",time,"#M00");
+			send_msg3("#M03",time,"#M00","tmsg");
 		}
 		//sleep(time);
 		//send_msg("#M0");
@@ -123,10 +123,10 @@
 	//turn_degブロック
 	ext.turn = function(degree,token) {
 		if (token == "右"){
-			send_msg3("#M04",degree,"#M00");
+			send_msg3("#M04",degree,"#M00","dmsg");
 		}
 		else{
-			send_msg3("#M03",degree,"#M00");
+			send_msg3("#M03",degree,"#M00","dmsg");
 		}
 		//sleep(time);
 		//send_msg("#M0");
