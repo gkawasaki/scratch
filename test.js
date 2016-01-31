@@ -224,6 +224,28 @@
 		});
 	};
 	
+	//jsensorブロック
+	ext.jsensor = function(callback) {
+		$.ajax({
+			type: "GET",
+			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
+			async: false,
+			data: {
+				msg : "jsensor"
+			},
+			dataType: "text",
+			context: {
+			  callback: callback
+			}
+			
+		  }).done(function(msg_r) {
+			//alert(msg_r);
+			ext._dist = msg_r;
+			this.callback(msg_r);
+		});
+	};
+	
+	
 	//物が近くにある
 	ext.near = function(){
 		$.ajax({
@@ -280,6 +302,7 @@
 			['R', 'ボールの数', 'ball'],
 			['r', '撮影画像を表示', 'show_img'],
 			['R', '距離センサの値', 'dsensor'],
+			['R', '回転角', 'jsensor'],
 			['b', '物が近くにある', 'near'],
 			['b', '物が近くにくる', 'near'],
 			//['r', 'ある', 'exista'],
