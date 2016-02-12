@@ -1,6 +1,7 @@
 ﻿(function(ext) {
 	ext._ip = "10.30.82.15";
 	ext._dist = 0;
+	ext._ball = 0;
 	
 	//ajaxによる通信
 	function send_msg(command){
@@ -201,7 +202,7 @@
 	};
 	
 	//ballブロック
-	ext.ball = function(callback) {
+	ext.ball = function() {
 		$.ajax({
 			type: "GET",
 			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
@@ -209,15 +210,27 @@
 			data: {
 				msg : "ball"
 			},
-			dataType: "text",
+			dataType: "text"
+			/*
 			context: {
 			  callback: callback
 			}
+			*/
 			
 		  }).done(function(msg_r) {
 			alert(msg_r);
-			this.callback(msg_r);
+			//this.callback(msg_r);
+			ext._ball = msg_r;
 		});
+		
+		if ( ext._ball > 0){
+				alert(ext._dist);
+				return true;
+			}
+		else{
+				return false;
+			}
+		
 	};
 	
 	//ip設定
@@ -328,13 +341,14 @@
 			[' ', '%n 秒かけてポーズ %n にする', 'sendPose', 1.0, 0],
 			['r', 'ポーズ %n の時の %m.servo のサーボの角度', 'getServoAtPose', 0, '頭'],
 			['r', 'ポーズ %n 時の %m.led 色LEDの明るさ', 'getLedAtPose', 0, '赤'],
-			['R', 'ボールの色', 'ball_c'],
-			['R', 'ボールの数', 'ball'],
+			//['R', 'ボールの色', 'ball_c'],
+			//['R', 'ボールの数', 'ball'],
 			['r', '撮影画像を表示', 'show_img'],
 			['R', '距離センサの値', 'dsensor'],
 			['R', '回転角', 'jsensor'],
 			['b', '物が近くにある', 'near'],
 			['b', '物が近くにくる', 'near'],
+			['b', '目の前にボールがあるなら', 'ball'],
 			//['r', 'ある', 'exista'],
 			//['r', 'ない', 'not_exist'],
 		],
