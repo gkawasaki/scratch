@@ -331,6 +331,7 @@
 			[' ', '%n 歩 %m.way に歩く', 'move', '4', '前'],
 			[' ', '%n 秒間 %m.direction に曲がる', 'turn', '5', '左'],
 			[' ', '%m.degree 度 %m.direction に曲がる', 'turn_deg', '90', '左'],
+			[' ', '%n 度 %m.direction に曲がる', 'turn_deg', '90', '左'],
 			[' ', '%m.side 手を振る', 'wave', '左'],
 			[' ', '両手を握る', 'grab'],
 			[' ', '右手を伸ばす', 'stretch'],
