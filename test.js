@@ -114,8 +114,31 @@
 
 	//テストブロック
 	ext.test = function(time) {
-		alert("open");
-		window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
+		//alert("open");
+		//window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
+		$.ajax({
+			type: "GET",
+			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
+			async: false,
+			data: {
+				msg : test
+			},
+			dataType: "text"
+			
+			/*
+			headers: {
+			  "Authorization": "Bearer " + token
+			},
+			context: {
+			  callback: callback
+			}
+			*/
+		  }).done(function(msg_r) {
+			//alert(msg_r);
+			//this.callback();
+			sleep(1);
+		});
+		
 	};
 	
 	//停止ブロック
