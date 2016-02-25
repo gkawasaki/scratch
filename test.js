@@ -114,7 +114,7 @@
 
 	//テストブロック
 	ext.test = function() {
-		//alert("open");
+		alert("open");
 		//window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
 		$.ajax({
 			type: "GET",
