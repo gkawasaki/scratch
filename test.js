@@ -1,5 +1,5 @@
 ﻿(function(ext) {
-	ext._ip = "10.30.82.15";
+	ext._ip = "10.30.82.111";
 	ext._dist = 0;
 	ext._ball = 0;
 	
