@@ -121,7 +121,7 @@
 			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
 			async: false,
 			data: {
-				msg : test
+				msg : "test"
 			},
 			dataType: "text"
 			
