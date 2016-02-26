@@ -114,7 +114,7 @@
 
 	//テストブロック
 	ext.test = function() {
-		alert("open");
+		//alert("open");
 		//window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
 		$.ajax({
 			type: "GET",
@@ -140,6 +140,36 @@
 		});
 		
 	};
+	
+	//impacrテストブロック
+	ext.test_imp = function() {
+		//alert("open");
+		//window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
+		$.ajax({
+			type: "GET",
+			url: "http://" + ext._ip + "/cgi-bin/test.cgi",
+			async: false,
+			data: {
+				msg : "test_imp"
+			},
+			dataType: "text"
+			
+			/*
+			headers: {
+			  "Authorization": "Bearer " + token
+			},
+			context: {
+			  callback: callback
+			}
+			*/
+		  }).done(function(msg_r) {
+			alert(msg_r);
+			//this.callback();
+			sleep(1);
+		});
+		
+	};
+	
 	
 	//停止ブロック
 	ext.stop = function() {
@@ -349,6 +379,7 @@
 	var descriptor = {
 		blocks: [
 			[' ', 'test_block', 'test'],
+			[' ', '衝撃検出テスト', 'test_imp'],
 			[' ', 'IPアドレスの設定 %n . %n . %n . %n', 'ip','0','0','0','0'],
 			[' ', '停止する', 'stop'],
 			[' ', '%n 歩 %m.way に歩く', 'move', '4', '前'],
