@@ -180,10 +180,10 @@
 	//moveブロック
 	ext.move = function(time,token) {
 		if (token == "前"){
-			send_msg3_t("#M01",time*1.5+1,"#M00");
+			send_msg3_t("#M01",time*1.5+0.5,"#M00");
 		}
 		else{
-			send_msg3_t("#M02",time*1.5+1,"#M00");
+			send_msg3_t("#M02",time*1.5+0.5,"#M00");
 		}
 		//sleep(time*1.5);
 		//sleep(time);
