@@ -221,13 +221,16 @@
 	//waveブロック
 	ext.wave = function(token) {
 		if (token == "右"){
-			send_msg("#M06");
+			//send_msg("#M06");
+			send_msg3_t("#M06",5,"#M00");
 		}
 		else if (token == "左"){
-			send_msg("#M08");
+			//send_msg("#M08");
+			send_msg3_t("#M08",5,"#M00");
 		}
 		else{
-			send_msg("#M05");
+			//send_msg("#M05");
+			send_msg3_t("#M05",5,"#M00");
 		}
 	};
 	
