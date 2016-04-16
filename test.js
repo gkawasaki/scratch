@@ -362,12 +362,12 @@
 			}
 			*/
 		  }).done(function(msg_r) {
-			alert(msg_r);
+			//alert(msg_r);
 			ext._dist = msg_r;
 		});
 	
 		if ( ext._dist > 510){
-				alert(ext._dist);
+				//alert(ext._dist);
 				return true;
 			}
 		else{
