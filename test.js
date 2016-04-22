@@ -141,6 +141,13 @@
 		
 	};
 	
+	//progブロック
+	ext.prog = function() {
+		alert("while true:\n  moveForward(4)\n  if obstacle == true:\n    moveBackward(2)\n    turnLeft(90)\n");
+		//window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );		
+	};
+	
+	
 	//impacrテストブロック
 	ext.test_imp = function() {
 		//alert("open");
@@ -382,6 +389,7 @@
 	var descriptor = {
 		blocks: [
 			[' ', 'test_block', 'test'],
+			[' ', 'prog', 'prog'],
 			[' ', '衝撃検出テスト', 'test_imp'],
 			[' ', 'IPアドレスの設定 %n . %n . %n . %n', 'ip','0','0','0','0'],
 			[' ', '停止する', 'stop'],
