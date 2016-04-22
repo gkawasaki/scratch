@@ -143,7 +143,7 @@
 	
 	//progブロック
 	ext.prog = function() {
-		alert("while true:\n  moveForward(4)\n  if obstacle == true:\n    moveBackward(2)\n    turnLeft(90)\n");
+		alert("while true:\n    moveForward(4)\n    if obstacle == true:\n        moveBackward(2)\n        turnLeft(90)\n");
 		//window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );		
 	};
 	
