@@ -309,6 +309,12 @@
 		window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
 	};
 	
+	//show_movie
+	ext.show_movie = function() {
+		//alert("open");
+		//window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
+	};
+	
 	//dsensorブロック
 	ext.dsensor = function(callback) {
 		$.ajax({
@@ -410,6 +416,7 @@
 			//['R', 'ボールの色', 'ball_c'],
 			//['R', 'ボールの数', 'ball'],
 			['r', '撮影画像を表示', 'show_img'],
+			['r', 'ロボット視点の映像を表示', 'show_movie'],
 			['R', '距離センサの値', 'dsensor'],
 			['R', '回転角', 'jsensor'],
 			['b', '目の前に障害物がある', 'near'],
