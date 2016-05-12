@@ -141,6 +141,15 @@
 		
 	};
 	
+	//テストブロック
+	ext.test2 = function() {
+		//alert("open");
+		//window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
+		descriptor.push({menu:way:"真ん中"});
+		
+	};
+	
+	
 	//progブロック
 	ext.prog = function() {
 		alert("while true:\n    moveForward(4)\n    if obstacle == true:\n        moveBackward(2)\n        turnLeft(90)\n");
@@ -395,6 +404,7 @@
 	var descriptor = {
 		blocks: [
 			[' ', 'test_block', 'test'],
+			[' ', '変数テスト', 'test2'],
 			[' ', 'prog', 'prog'],
 			[' ', '衝撃検出テスト', 'test_imp'],
 			[' ', 'IPアドレスの設定 %n . %n . %n . %n', 'ip','0','0','0','0'],
