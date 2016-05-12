@@ -147,9 +147,10 @@
 		//window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
 		alert("aaaa");
 		alert(descriptor.menus.way);
-		descriptor.menus.way.push("真ん中");
+		descriptor.menus.way.push('真ん中');
 		alert(descriptor.menus.way);
 		alert("bbbb");
+		window.location.reload();
 	};
 	
 	
