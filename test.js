@@ -150,7 +150,7 @@
 		descriptor.menus.way.push('真ん中');
 		alert(descriptor.menus.way);
 		alert("bbbb");
-		window.location.reload();
+		//window.location.reload();
 	};
 	
 	
@@ -436,6 +436,8 @@
 			['b', '目の前に障害物がある', 'near'],
 			['b', '物が近くにくる', 'near'],
 			['b', '目の前にボールがある', 'ball'],
+			[' ', 'プログラムの先頭', 'top'],
+			[' ', 'プログラムの末尾', 'end'],
 			//['r', 'ある', 'exista'],
 			//['r', 'ない', 'not_exist'],
 		],
