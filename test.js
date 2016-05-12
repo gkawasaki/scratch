@@ -146,9 +146,9 @@
 		//alert("open");
 		//window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
 		alert("aaaa");
-		alert("descriptor.menu.way");
-		descriptor.menu.way.push("真ん中");
-		alert("descriptor.menu.way");
+		alert(descriptor.menus.way);
+		descriptor.menus.way.push("真ん中");
+		alert(descriptor.menus.way);
 		alert("bbbb");
 	};
 	
