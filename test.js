@@ -145,11 +145,11 @@
 	ext.test2 = function() {
 		//alert("open");
 		//window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
-		alert(aaaa);
-		alert(descriptor.menu.way);
+		alert("aaaa");
+		alert("descriptor.menu.way");
 		descriptor.menu.way.push("真ん中");
-		alert(descriptor.menu.way);
-		alert(bbbb);
+		alert("descriptor.menu.way");
+		alert("bbbb");
 	};
 	
 	
