@@ -145,7 +145,7 @@
 	ext.test2 = function() {
 		//alert("open");
 		//window.open( "http://" + ext._ip + "/cgi-bin/img.cgi" , "_blank" );
-		//descriptor.push({menu:way:"真ん中"});
+		descriptor.menu.way = "真ん中";
 		
 	};
 	
