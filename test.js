@@ -454,5 +454,5 @@
 	};
 
 	// 最後にExtensionを登録する
-	ScratchExtensions.register('Simple extension', descriptor, ext);
+	ScratchExtensions.register('Scratchx2rapiro', descriptor, ext);
 })({});
