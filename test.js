@@ -442,6 +442,8 @@
 			//['r', 'ない', 'not_exist'],
 			[' ', '%m.way_m する', 'move_mouse', '前進'],
 			[' ', 'LED %n を %m.sel する', 'led', '0', '点灯'],
+			[' ', '%m.direction の車輪を %n HZでまわす', 'move_wheel', '左',400],
+			[' ', '右の車輪を %n HZ、左の車輪を %n HZで %n 秒まわす', 'wheel', 400, 400, 1],
 		],
 		menus: {
 		  way: ['前', '後ろ'],
