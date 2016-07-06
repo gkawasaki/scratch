@@ -441,6 +441,7 @@
 			//['r', 'ある', 'exista'],
 			//['r', 'ない', 'not_exist'],
 			[' ', '%m.way_m する', 'move_mouse', '前進'],
+			[' ', '%n 秒 %m.way_m する', 'move_mouse_time', '前進'],
 			[' ', 'LED %m.led_num を %m.sel する', 'led', '0', '点灯'],
 			[' ', '%m.direction の車輪を %n HZでまわす', 'move_wheel', '左',400],
 			[' ', '右の車輪を %n HZ、左の車輪を %n HZで %n 秒まわす', 'wheel', 400, 400, 1],
