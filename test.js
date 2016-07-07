@@ -112,6 +112,7 @@
 		return {status: 2, msg: 'Ready'};
 	};
 
+/*
 	//テストブロック
 	ext.test = function() {
 		//alert("open");
@@ -125,14 +126,14 @@
 			},
 			dataType: "text"
 			
-			/*
+			
 			headers: {
 			  "Authorization": "Bearer " + token
 			},
 			context: {
 			  callback: callback
 			}
-			*/
+			
 		  }).done(function(msg_r) {
 			alert(msg_r);
 			//this.callback();
@@ -174,14 +175,14 @@
 			},
 			dataType: "text"
 			
-			/*
+			
 			headers: {
 			  "Authorization": "Bearer " + token
 			},
 			context: {
 			  callback: callback
 			}
-			*/
+			
 		  }).done(function(msg_r) {
 			alert(msg_r);
 			//this.callback();
@@ -287,11 +288,11 @@
 				msg : "ball"
 			},
 			dataType: "text"
-			/*
+			
 			context: {
 			  callback: callback
 			}
-			*/
+			
 			
 		  }).done(function(msg_r) {
 			alert(msg_r);
@@ -382,11 +383,11 @@
 			},
 			dataType: "text"
 			
-			/*
+			
 			context: {
 			  callback: callback
 			}
-			*/
+			
 		  }).done(function(msg_r) {
 			//alert(msg_r);
 			ext._dist = msg_r;
@@ -401,7 +402,7 @@
 			}
 	
 	};
-	
+*/
 	
 	
 	// ブロックと関数のひも付け
