@@ -456,8 +456,8 @@
 			['R', '距離センサ %m.led_num の値', 'dsensor_m', 0],
 			[' ', 'プログラムを終了する', 'kill'],
 			[' ', 'LED %m.led_num を %m.sel する', 'led', '0', '点灯'],
-			[' ', '%m.direction の車輪を %n HZでまわす', 'move_wheel', '左',400],
-			[' ', '右の車輪を %n HZ、左の車輪を %n HZで %n 秒まわす', 'wheel', 400, 400, 1],
+			[' ', '%m.direction の車輪を %n Hzでまわす', 'move_wheel', '左',400],
+			[' ', '右の車輪を %n HZ、左の車輪を %n Hzで %n 秒まわす', 'wheel', 400, 400, 1],
 		],
 		menus: {
 		  way: ['前', '後ろ'],
