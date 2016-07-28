@@ -449,6 +449,7 @@
 			[' ', '停止する', 'stop'],
 			[' ', '%m.way_m する', 'move_mouse', '前進'],
 			[' ', '%n 秒 %m.way_m する', 'move_mouse_time', '1', '前進'],
+			[' ', '%n cm %m.way_m する', 'move_mouse_dist', '1', '前進'],
 			[' ', '%n 秒間 %m.direction に曲がる', 'turn', '5', '左'],
 			[' ', '%m.degree 度 %m.direction に曲がる', 'turn_deg', '90', '左'],
 			['b', '目の前に障害物がある', 'near'],
