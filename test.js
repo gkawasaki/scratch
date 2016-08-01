@@ -452,6 +452,7 @@
 			[' ', '%n cm %m.way_m する', 'move_mouse_dist', '1', '前進'],
 			[' ', '%n 秒間 %m.direction に曲がる', 'turn', '5', '左'],
 			[' ', '%m.degree 度 %m.direction に曲がる', 'turn_deg', '90', '左'],
+			[' ', '%m.color 色の物を見つける', 'search_color', '赤'],
 			['b', '目の前に障害物がある', 'near'],
 			['b', '目の前に障害物がくる', 'near'],
 			['b', 'スイッチ %m.sw_num が押されている', 'sw', 0],
