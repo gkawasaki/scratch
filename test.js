@@ -480,5 +480,5 @@
 	};
 
 	// 最後にExtensionを登録する
-	ScratchExtensions.register('Scratchx2rapiro', descriptor, ext);
+	ScratchExtensions.register('Scratchx2mouse', descriptor, ext);
 })({});
