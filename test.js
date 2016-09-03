@@ -462,6 +462,7 @@
 			[' ', 'LED %m.led_num を %m.sel する', 'led', '0', '点灯'],
 			[' ', '%m.direction の車輪を %n Hzでまわす', 'move_wheel', '左',400],
 			[' ', '右の車輪を %n Hz、左の車輪を %n Hzで %n 秒まわす', 'wheel', 400, 400, 1],
+			[' ', '%n 区画 %m.way_m する', 'move_mouse_sect', '1', '前進'],
 		],
 		menus: {
 		  way: ['前', '後ろ'],
