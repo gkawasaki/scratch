@@ -463,7 +463,7 @@
 			[' ', '%m.direction の車輪を %n Hzでまわす', 'move_wheel', '左',400],
 			[' ', '右の車輪を %n Hz、左の車輪を %n Hzで %n 秒まわす', 'wheel', 400, 400, 1],
 			[' ', '%n マス %m.way_m する', 'move_mouse_sect', '1', '前進'],
-			[' ', '分かれ道まで進む', 'move_mouse_sect'],
+			[' ', '分かれ道まで直進する', 'move_mouse_sect'],
 			[' ', '%m.direction に曲がる', 'turn_deg', '右'],
 		],
 		menus: {
