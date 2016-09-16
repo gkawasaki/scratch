@@ -466,6 +466,7 @@
 			[' ', '分かれ道まで直進する', 'move_mouse_sect'],
 			[' ', '曲がり角まで直進する', 'move_mouse_sect'],
 			[' ', '%m.direction に曲がる', 'turn_deg', '左'],
+			[' ', '行き止まりまで直進する', 'move_mouse_sect'],
 		],
 		menus: {
 		  way: ['前', '後ろ'],
