@@ -465,7 +465,7 @@
 			[' ', '%n マス %m.way_m する', 'move_mouse_sect', '1', '前進'],
 			[' ', '分かれ道まで直進する', 'move_mouse_sect'],
 			[' ', '曲がり角まで直進する', 'move_mouse_sect'],
-			[' ', '%m.direction に曲がる', 'turn_deg', '左'],
+			[' ', '%m.direction に曲がる', 'turn_trace', '左'],
 			[' ', '行き止まりまで直進する', 'move_mouse_sect'],
 		],
 		menus: {
