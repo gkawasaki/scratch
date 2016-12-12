@@ -464,7 +464,7 @@
 			//[' ', '曲がり角まで直進する', 'move_mouse_corner'],
 			[' ', '%m.direction に曲がる', 'turn_trace', '左'],
 			//[' ', '行き止まりまで直進する', 'move_mouse_end'],
-			['b', '%m.dir_trace 進めるなら', 'pos_move', 'まっすぐ'],
+			['b', '%m.dir_trace 道があるなら', 'pos_move', '前に'],
 			[' ', 'プログラムを終了する', 'kill'],
 			/*
 			[' ', 'LED %m.led_num を %m.sel する', 'led', '0', '点灯'],
@@ -479,7 +479,7 @@
 		  way_m: ['前進', '後退'],
 		  sel: ['点灯', '消灯'],
 		  direction: ['左', '右'],
-		  dir_trace: ['まっすぐ', '左に', '右に'],
+		  dir_trace: ['前に', '左に', '右に'],
 		  road_trace: ['分かれ道', '曲がり角', '行き止まり'],
 		  led_num: ['0', '1', '2', '3'],
 		  sw_num: ['0', '1', '2'],
