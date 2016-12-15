@@ -460,7 +460,7 @@
 			['b', '目の前に %m.color 色の物がある', 'color', '赤'],
 			['R', '距離センサ %m.led_num の値', 'dsensor_m', 0],
 			*/
-			[' ', '%m.road_trace まで直進する', 'move_mouse_branch', '分かれ道'],
+			[' ', '%m.road_trace まで直進する', 'move_mouse_branch', '分かれ道まで'],
 			//[' ', '曲がり角まで直進する', 'move_mouse_corner'],
 			[' ', '%m.direction に曲がる', 'turn_trace', '左'],
 			//[' ', '行き止まりまで直進する', 'move_mouse_end'],
