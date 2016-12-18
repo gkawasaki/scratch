@@ -464,7 +464,8 @@
 			//[' ', '曲がり角まで直進する', 'move_mouse_corner'],
 			[' ', '%m.direction を向く', 'turn_trace', '左'],
 			//[' ', '行き止まりまで直進する', 'move_mouse_end'],
-			['b', '%m.dir_trace 道があるなら', 'pos_move', '前に'],
+			['b', '%m.dir_trace 道がある', 'pos_move', '前に'],
+			['b', 'ゴール', 'goal'],
 			[' ', 'プログラムを終了する', 'kill'],
 			/*
 			[' ', 'LED %m.led_num を %m.sel する', 'led', '0', '点灯'],
