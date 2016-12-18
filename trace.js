@@ -462,7 +462,7 @@
 			*/
 			[' ', '%m.road_trace 直進する', 'move_mouse_branch', '分かれ道まで'],
 			//[' ', '曲がり角まで直進する', 'move_mouse_corner'],
-			[' ', '%m.direction に曲がる', 'turn_trace', '左'],
+			[' ', '%m.direction を向く', 'turn_trace', '左'],
 			//[' ', '行き止まりまで直進する', 'move_mouse_end'],
 			['b', '%m.dir_trace 道があるなら', 'pos_move', '前に'],
 			[' ', 'プログラムを終了する', 'kill'],
@@ -478,7 +478,7 @@
 		  way: ['前', '後ろ'],
 		  way_m: ['前進', '後退'],
 		  sel: ['点灯', '消灯'],
-		  direction: ['左', '右'],
+		  direction: ['左', '右', '後ろ'],
 		  dir_trace: ['前に', '左に', '右に'],
 		  road_trace: ['分かれ道まで', '曲がり角まで', '行き止まりまで', '１区分'],
 		  led_num: ['0', '1', '2', '3'],
